@@ -103,6 +103,7 @@ html,body{
     font-size: 2vw;
     font-weight: 500;
     letter-spacing: -.12vw;
+    margin-left: 20vw;
 }
 
 #homelast p::selection{
