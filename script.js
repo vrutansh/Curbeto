@@ -12,33 +12,23 @@ gsap.to(".felfelem", {
     scrub: 1,
   },
   y: "-300%",
-  ease: Power1,
+  ease: Power1
 });
 
-// let sections = document.querySelectorAll(".felfelem");
-// Shery.imageEffect(".images", {
-//   style: 4,
-//   config: { onMouse: { value: 1 } },
-//   slideStyle: (setScroll) => {
-//     sections.forEach(function (section, index) {
-//       ScrollTrigger.create({
-//         trigger: section,
-//         start: "top top",
-//         scrub: 1,
-//         onUpdate: function (prog) {
-//           setScroll(prog.progress + index);
-//         },
-//       });
-//     });
-//   },
-// });
-
-
-// Shery.imageEffect(".images", {
-//     style: 5,
-//     slideStyle: (setScroll) => {
-//       window.addEventListener("scroll", () => {
-//         setScroll(window.scrollY / innerHeight); //Updating the scroll
-//       });
-//     },
-//   });
+let section = document.querySelectorAll(".felfelem");
+Shery.imageEffect(".images", {
+    style: 4,
+    config: { onMouse: { value: 1 } },
+    slideStyle: (setScroll) => {
+      section.forEach(function(section){
+        ScrollTrigger.create({
+          trigger: section,
+          start: "top top ",
+          scrub: 1,
+          onUpdate: function(prog){
+            setScroll(prog.progress + index);
+          },
+        });
+      });  
+    },
+  });
