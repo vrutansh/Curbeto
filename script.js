@@ -15,20 +15,20 @@ gsap.to(".felfelem", {
   ease: Power1
 });
 
-let section = document.querySelectorAll(".felfelem");
-Shery.imageEffect(".images", {
-    style: 4,
-    config: { onMouse: { value: 1 } },
-    slideStyle: (setScroll) => {
-      section.forEach(function(section){
-        ScrollTrigger.create({
-          trigger: section,
-          start: "top top ",
-          scrub: 1,
-          onUpdate: function(prog){
-            setScroll(prog.progress + index);
-          },
-        });
-      });  
-    },
-  });
+// let section = document.querySelectorAll(".felfelem");
+// Shery.imageEffect(".images", {
+//     style: 4,
+//     config: { onMouse: { value: 1 } },
+//     slideStyle: (setScroll) => {
+//       section.forEach(function(section, index){
+//         ScrollTrigger.create({
+//           trigger: section,
+//           start: "top top ",
+//           scrub: 1,
+//           onUpdate: function(prog){
+//             setScroll(prog.progress + index);
+//           },
+//         });
+//       });  
+//     },
+//   });
